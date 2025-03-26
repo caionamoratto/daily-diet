@@ -1,31 +1,25 @@
 
-import { Feather } from "@expo/vector-icons";
+import { AntDesign } from "@expo/vector-icons";
 import { SafeAreaView } from "react-native-safe-area-context";
 import styled, { type DefaultTheme } from "styled-components/native";
 
-export const Container = styled(SafeAreaView)`	
+export const Container = styled(SafeAreaView)`
+
 	flex: 1;
 	background-color: ${({theme}: DefaultTheme) => theme.COLORS.GRAY_7};
-	padding: 24px;
 `;
 
 export const DietData = styled.View`
 	width: 100%;
-	display: relative;
-	height: 102px;
-	align-items: center;
-	justify-content: center;
-	background-color: ${({theme}: DefaultTheme) => theme.COLORS.GREEN_LIGHT};
-	margin-bottom: 24px;
-	border-radius: 8px;
-`;
-export const Icon = styled(Feather).attrs(
-	({ theme, type, name }: DefaultTheme) => ({
-		size: 24,
-		color: theme.COLORS.GREEN_DARK,
+	height:25%;	
+	padding-top: 10%;
 
-	}),
-)``;
+	position: absolute;
+	z-index: -1;
+	align-items: center;
+	
+	background-color: ${({theme}: DefaultTheme) => theme.COLORS.GREEN_LIGHT};
+`;
 
 export const DietStatisticsText =styled.Text`
 	font-size: ${({theme}: DefaultTheme) => theme.FONT_SIZE.XXL}px;
@@ -37,13 +31,18 @@ export const DietDataText =styled.Text`
 	font-family: ${({theme}: DefaultTheme) => theme.FONT_FAMILY.REGULAR};
 `;
 
-export const SimpleView = styled.View`	
+export const SimpleView = styled.View`
+	align-items: center;
+	justify-content: center;
+	margin-top: 25%;
 	background-color: ${({theme}: DefaultTheme) => theme.COLORS.GRAY_7};
+	padding: 24px;
+	border-radius: 20px;
 `;
 
 export const SimpleText =styled.Text`
 	font-size: ${({theme}: DefaultTheme) => theme.FONT_SIZE.MDM}px;
-	font-family: ${({theme}: DefaultTheme) => theme.FONT_FAMILY.REGULAR};
+	font-family: ${({theme}: DefaultTheme) => theme.FONT_FAMILY.BOLD};
 	marginBottom: 8px;
 `;
 

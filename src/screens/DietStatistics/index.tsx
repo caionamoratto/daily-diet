@@ -2,35 +2,25 @@ import { Container, DietData, DietStatisticsText, DietDataText, SimpleText, Simp
 import { Header } from "@components/Header";
 import { StatusBarDinamic } from "@components/StatusBarDinamic";
 import { Button } from "@components/Button";
-
 import { useState } from "react";
+import theme from "@theme/index";
 import { useNavigation } from "@react-navigation/native";
-import { TouchableOpacity } from "react-native";
-import { Icon } from "@screens/Home/styles";
 
-export function Home() {
-	const [onDiet, setOnDiet] = useState();
-
+export function DietStatistics() {
+	
 	const navigation = useNavigation();
-
-	function handleStatistics() {
-		navigation.navigate("stats");
-	}
+	
 
 	return (
 		<Container>
-			<StatusBarDinamic />
-			<Header/>
+			<StatusBarDinamic backColor= {theme.COLORS.GREEN_LIGHT} />
+			<Header showBackButton = {true} type="TERTIARY" />
 			<DietData>
-				<TouchableOpacity onPress={handleStatistics}>
-					<Icon name ={"arrow-up-right"}/>
-				</TouchableOpacity>
 				<DietStatisticsText>0%</DietStatisticsText>
 				<DietDataText>das refeições dentro da dieta</DietDataText>
 			</DietData>
 			<SimpleView>
 				<SimpleText>Refeições</SimpleText>
-				<Button title="Nova refeição" type="PRIMARY" icon="plus"/>
 			</SimpleView>
 		</Container>
 	);
