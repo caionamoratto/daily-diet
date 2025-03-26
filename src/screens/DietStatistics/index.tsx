@@ -14,7 +14,7 @@ export function DietStatistics() {
 	return (
 		<Container>
 			<StatusBarDinamic backColor= {theme.COLORS.GREEN_LIGHT} />
-			<Header showBackButton = {true} type="TERTIARY" />
+			<Header showBackButton = {true} title="Nova Refeição" type="TERTIARY" />
 			<DietData>
 				<DietStatisticsText>0%</DietStatisticsText>
 				<DietDataText>das refeições dentro da dieta</DietDataText>

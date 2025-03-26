@@ -12,7 +12,7 @@ export const Container = styled(SafeAreaView)`
 export const DietData = styled.View`
 	width: 100%;
 	height:25%;	
-	padding-top: 10%;
+	padding-top: 15%;
 
 	position: absolute;
 	z-index: -1;

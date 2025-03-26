@@ -31,8 +31,8 @@ export const BackButtonView = styled.View`
     position: relative;
     
     background-color: ${({theme}: DefaultTheme) => theme.COLORS.GREEN_LIGHT};
-    padding: 0 12px;
-    padding-top: 6px;
+    padding-left: 24px;
+    padding-top: 24px;
 `;
 
 export const BackButton = styled.TouchableOpacity`
@@ -49,7 +49,7 @@ export const BackTitleView = styled.View`
     
     align-items: center;
     justify-content: center;
-    margin-right: 30px;
+    margin-right: 66px;
 
     background-color: ${({theme}: DefaultTheme) => theme.COLORS.GREEN_LIGHT};    
 `;
