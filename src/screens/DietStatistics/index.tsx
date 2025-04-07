@@ -1,10 +1,12 @@
-import { Container, DietData, DietStatisticsText, DietDataText, SimpleText, SimpleView } from "./styles";
-import { Header } from "@components/Header";
-import { StatusBarDinamic } from "@components/StatusBarDinamic";
-import { Button } from "@components/Button";
-import { useState } from "react";
-import theme from "@theme/index";
 import { useNavigation } from "@react-navigation/native";
+import { Container, DietData,  SimpleText, SimpleView } from "./styles";
+
+import { Header } from "@components/Header";
+import theme from "@theme/index";
+
+import { StatusBarDinamic } from "@components/StatusBarDinamic";
+import { DietGoal } from "@components/DietGoal";
+
 
 export function DietStatistics() {
 	
@@ -16,8 +18,7 @@ export function DietStatistics() {
 			<StatusBarDinamic backColor= {theme.COLORS.GREEN_LIGHT} />
 			<Header showBackButton = {true} title="Nova Refeição" type="TERTIARY" />
 			<DietData>
-				<DietStatisticsText>0%</DietStatisticsText>
-				<DietDataText>das refeições dentro da dieta</DietDataText>
+				<DietGoal percentage="0%"/>
 			</DietData>
 			<SimpleView>
 				<SimpleText>Refeições</SimpleText>

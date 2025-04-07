@@ -9,32 +9,27 @@ export const Container = styled(SafeAreaView)`
 	padding: 24px;
 `;
 
-export const DietData = styled.View`
-	width: 100%;
-	display: relative;
+export const DietData = styled.View`	
+	width: 100%;	
 	height: 102px;
+	flex-direction: row;
 	align-items: center;
 	justify-content: center;
-	background-color: ${({theme}: DefaultTheme) => theme.COLORS.GREEN_LIGHT};
-	margin-bottom: 24px;
+	background-color: ${({theme}: DefaultTheme) => theme.COLORS.GREEN_LIGHT};	
 	border-radius: 8px;
+	margin-bottom: 24px;
 `;
+
+export const IconView = styled.View`
+	transform: translate(280px, -30px);
+	background-color: ${({theme}: DefaultTheme) => theme.COLORS.GREEN_LIGHT};
+`;
+
 export const Icon = styled(Feather).attrs(
-	({ theme, type, name }: DefaultTheme) => ({
+	({ theme }: DefaultTheme) => ({
 		size: 24,
 		color: theme.COLORS.GREEN_DARK,
-
-	}),
-)``;
-
-export const DietStatisticsText =styled.Text`
-	font-size: ${({theme}: DefaultTheme) => theme.FONT_SIZE.XXL}px;
-	font-family: ${({theme}: DefaultTheme) => theme.FONT_FAMILY.BOLD};
-`;
-
-export const DietDataText =styled.Text`
-	font-size: ${({theme}: DefaultTheme) => theme.FONT_SIZE.SML}px;
-	font-family: ${({theme}: DefaultTheme) => theme.FONT_FAMILY.REGULAR};
+	}),)`
 `;
 
 export const SimpleView = styled.View`	

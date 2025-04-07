@@ -27,10 +27,11 @@ export const BackButtonView = styled.View`
     flex-direction: row;
     display: flex;
     justify-content: space-between;
-    align-items: center;   
+    align-items: center; 
     position: relative;
+    width: 100%;
     
-    background-color: ${({theme}: DefaultTheme) => theme.COLORS.GREEN_LIGHT};
+    background-color: ${({theme, type}: DefaultTheme) => type === "PRIMARY"? theme.COLORS.GRAY_5 : type === "SECONDARY"? theme.COLORS.RED_LIGHT : theme.COLORS.GREEN_LIGHT};
     padding-left: 24px;
     padding-top: 24px;
 `;
@@ -50,8 +51,7 @@ export const BackTitleView = styled.View`
     align-items: center;
     justify-content: center;
     margin-right: 66px;
-
-    background-color: ${({theme}: DefaultTheme) => theme.COLORS.GREEN_LIGHT};    
+   
 `;
 
 export const BackTitle = styled.Text`

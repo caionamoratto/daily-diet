@@ -16,7 +16,7 @@ export const Container = styled.TouchableOpacity`
     align-items: center;
     border-radius: 6px;
     justify-content: center;
-    backgroundColor: ${({theme, type}: DefaultTheme)=> (type === "PRIMARY"? theme.COLORS.GRAY_1 : theme.COLORS.WHITE)};
+    backgroundColor: ${({theme, type}: DefaultTheme)=> (type === "PRIMARY"? theme.COLORS.GRAY_2 : theme.COLORS.WHITE)};
     border: 2px solid ${theme.COLORS.GRAY_1};
 `;
 
@@ -32,6 +32,6 @@ export const Icon = styled(AntDesign).attrs<Props>(
 	({ theme, type, name }: DefaultTheme) => ({
         marginRight: name === "edit" ? 12 : name === "plus" ? 12  : name === "delete" ? 12 :0,
 		size: 18,
-		color: type === "PRIMARY"? theme.COLORS.WHITE : theme.COLORS.GRAY_1,
+		color: type === "PRIMARY"? theme.COLORS.WHITE : theme.COLORS.GRAY_2,
 	}),
 )``;

@@ -20,7 +20,7 @@ export function Header({title, type = "PRIMARY", showBackButton = false}: Props)
 	return (
 		<Container>            
 			{showBackButton === true ? (
-				<BackButtonView>
+				<BackButtonView type={type}>
 					<BackButton onPress={handleGoBackHome}>
 						<BackIcon name="arrow-back" type={type}/>
 					</BackButton>
